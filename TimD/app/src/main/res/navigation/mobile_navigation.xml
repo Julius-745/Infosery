@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_produk">
+
+    <fragment
+        android:id="@+id/navigation_produk"
+        android:name="id.co.mka.inposeryapp.possystem.ui.produk.PosProdukFragment"
+        android:label="@string/title_produk"
+        tools:layout="@layout/fragment_pos_produk" />
+
+    <fragment
+        android:id="@+id/navigation_bayar"
+        android:name="id.co.mka.inposeryapp.possystem.ui.bayar.PosBayarFragment"
+        android:label="@string/title_bayar"
+        tools:layout="@layout/fragment_pos_bayar" />
+
+    <fragment
+        android:id="@+id/navigation_riwayat"
+        android:name="id.co.mka.inposeryapp.possystem.ui.riwayat.PosRiwayatFragment"
+        android:label="@string/title_riwayat"
+        tools:layout="@layout/fragment_pos_riwayat" />
+</navigation>

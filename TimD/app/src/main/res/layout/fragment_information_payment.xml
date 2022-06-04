@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="@color/bluebg"
+	android:fillViewport="true"
+	tools:context=".subscribe.InformationPaymentFragment">
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="vertical">
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical">
+
+			<TextView
+				android:id="@+id/textView6"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="36dp"
+				android:text="@string/informasi_pemesanan"
+				android:textColor="@color/textbold"
+				android:textSize="18sp"
+				android:textStyle="bold"
+				android:gravity="center"/>
+
+			<androidx.cardview.widget.CardView
+				android:id="@+id/cardView"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginHorizontal="36dp"
+				android:layout_marginVertical="18dp"
+				app:cardCornerRadius="8dp">
+
+				<androidx.constraintlayout.widget.ConstraintLayout
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:layout_margin="20dp">
+
+					<TextView
+						android:id="@+id/textView8"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="@string/detail_pemesanan"
+						android:textColor="@color/textbold"
+						android:textSize="16sp"
+						android:textStyle="bold"
+						app:layout_constraintStart_toStartOf="parent"
+						app:layout_constraintTop_toTopOf="parent" />
+
+					<TableLayout
+						android:id="@+id/table_detail"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_marginVertical="10dp"
+						android:stretchColumns="1"
+						app:layout_constraintEnd_toEndOf="parent"
+						app:layout_constraintStart_toStartOf="parent"
+						app:layout_constraintTop_toBottomOf="@+id/textView8">
+
+						<TableRow
+							android:layout_width="match_parent"
+							android:layout_height="match_parent"
+							android:layout_marginVertical="10dp">
+
+							<TextView
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:paddingEnd="5dp"
+								android:text="@string/item"
+								android:textColor="@color/textbold"
+								android:textSize="14sp"
+								android:textStyle="bold" />
+
+							<TextView
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:paddingHorizontal="3dp"
+								android:text="@string/jumlah_item"
+								android:textAlignment="center"
+								android:textColor="@color/textbold"
+								android:textSize="14sp"
+								android:textStyle="bold" />
+
+							<TextView
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:paddingStart="10dp"
+								android:text="@string/harga"
+								android:textColor="@color/textbold"
+								android:textSize="14sp"
+								android:textStyle="bold" />
+						</TableRow>
+
+						<TableRow
+							android:layout_width="match_parent"
+							android:layout_height="match_parent">
+
+							<TextView
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:paddingEnd="5dp"
+								android:text="@string/monthly_plan"
+								android:textColor="@color/textbold"
+								android:textSize="14sp" />
+
+							<androidx.appcompat.widget.AppCompatSpinner
+								android:id="@+id/jml_item"
+								android:layout_width="57dp"
+								android:layout_height="22dp"
+								android:layout_marginHorizontal="40dp"
+								android:background="@drawable/custom_spinner" />
+
+							<TextView
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:paddingStart="10dp"
+								android:text="@string/rp_27_000"
+								android:textColor="@color/textbold"
+								android:textSize="14sp" />
+
+						</TableRow>
+					</TableLayout>
+
+					<TextView
+						android:id="@+id/textView11"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_marginVertical="20dp"
+						android:text="@string/metode_pembayaran"
+						android:textColor="@color/textbold"
+						android:textSize="16sp"
+						android:textStyle="bold"
+						app:layout_constraintStart_toStartOf="parent"
+						app:layout_constraintTop_toBottomOf="@+id/table_detail" />
+
+					<RadioGroup
+						android:id="@+id/radioGroup"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:checkedButton="@id/tf_manual"
+						android:orientation="vertical"
+						app:layout_constraintEnd_toEndOf="parent"
+						app:layout_constraintStart_toStartOf="parent"
+						app:layout_constraintTop_toBottomOf="@+id/textView11">
+
+						<androidx.appcompat.widget.AppCompatRadioButton
+							android:id="@+id/tf_manual"
+							android:layout_width="wrap_content"
+							android:layout_height="40dp"
+							android:button="@drawable/custom_radio"
+							android:checked="true"
+							android:paddingStart="7dp"
+							android:text="@string/transfer_manual"
+							android:textSize="14sp" />
+
+						<androidx.appcompat.widget.AppCompatRadioButton
+							android:id="@+id/tf_otomatis"
+							android:layout_width="wrap_content"
+							android:layout_height="30dp"
+							android:button="@drawable/custom_radio"
+							android:paddingStart="7dp"
+							android:text="@string/otomatis_coming_soon"
+							android:textSize="14sp" />
+					</RadioGroup>
+
+				</androidx.constraintlayout.widget.ConstraintLayout>
+			</androidx.cardview.widget.CardView>
+
+			<androidx.cardview.widget.CardView
+				android:id="@+id/cardView1"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginHorizontal="36dp"
+				app:cardCornerRadius="8dp">
+
+				<androidx.constraintlayout.widget.ConstraintLayout
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:layout_margin="20dp">
+
+					<TextView
+						android:id="@+id/textView10"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="@string/ringkasan_pemesanan"
+						android:textColor="@color/textbold"
+						android:textSize="16sp"
+						android:textStyle="bold"
+						app:layout_constraintStart_toStartOf="parent"
+						app:layout_constraintTop_toTopOf="parent" />
+
+					<TextView
+						android:id="@+id/textView12"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_marginVertical="10dp"
+						android:text="@string/sub_total"
+						android:textColor="@color/textbold"
+						android:textSize="14sp"
+						android:textStyle="bold"
+						app:layout_constraintStart_toStartOf="parent"
+						app:layout_constraintTop_toBottomOf="@+id/textView10" />
+
+
+					<TableLayout
+						android:layout_width="match_parent"
+						android:layout_height="match_parent"
+						android:stretchColumns="0"
+						app:layout_constraintEnd_toEndOf="parent"
+						app:layout_constraintStart_toStartOf="parent"
+						app:layout_constraintTop_toBottomOf="@+id/textView12">
+
+						<TableRow
+							android:layout_width="match_parent"
+							android:layout_height="match_parent"
+							android:layout_marginVertical="10dp">
+
+							<TextView
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:paddingLeft="30dp"
+								android:text="@string/harga"
+								android:textColor="@color/textbold"
+								android:textSize="14sp" />
+
+							<TextView
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:text="@string/rp"
+								android:textColor="@color/textbold"
+								android:textSize="14sp" />
+
+							<TextView
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:gravity="right"
+								android:paddingLeft="8dp"
+								android:text="@string/_54_000"
+								android:textColor="@color/textbold"
+								android:textSize="14sp" />
+						</TableRow>
+
+						<TableRow
+							android:layout_width="match_parent"
+							android:layout_height="match_parent">
+
+							<TextView
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:text="@string/total_transfer"
+								android:textColor="@color/textbold"
+								android:textSize="14sp"
+								android:textStyle="bold" />
+
+							<TextView
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:text="@string/rp"
+								android:textColor="@color/textbold"
+								android:textSize="14sp"
+								android:textStyle="bold" />
+
+							<TextView
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:gravity="right"
+								android:paddingLeft="8dp"
+								android:text="@string/_54_000"
+								android:textColor="@color/textbold"
+								android:textSize="14sp"
+								android:textStyle="bold" />
+
+						</TableRow>
+
+					</TableLayout>
+
+				</androidx.constraintlayout.widget.ConstraintLayout>
+			</androidx.cardview.widget.CardView>
+
+			<androidx.cardview.widget.CardView
+				android:id="@+id/cardView2"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginHorizontal="36dp"
+				android:layout_marginVertical="18dp"
+				android:backgroundTint="@color/bg_gray"
+				app:cardCornerRadius="8dp">
+
+				<androidx.constraintlayout.widget.ConstraintLayout
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:layout_margin="20dp">
+
+					<TextView
+						android:id="@+id/textView14"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="@string/informasi_penting"
+						android:textColor="@color/textbold"
+						android:textSize="14sp"
+						android:textStyle="bold"
+						app:layout_constraintStart_toStartOf="parent"
+						app:layout_constraintTop_toTopOf="parent" />
+
+					<TextView
+						android:id="@+id/textView15"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_marginVertical="10dp"
+						android:paddingEnd="10dp"
+						android:text="@string/desc_info"
+						android:textColor="@color/textdesc"
+						android:textSize="12sp"
+						app:layout_constraintStart_toStartOf="parent"
+						app:layout_constraintTop_toBottomOf="@+id/textView14" />
+
+				</androidx.constraintlayout.widget.ConstraintLayout>
+			</androidx.cardview.widget.CardView>
+		</LinearLayout>
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:gravity="bottom"
+			android:orientation="vertical">
+
+			<androidx.appcompat.widget.AppCompatButton
+				android:id="@+id/bt_buat_pesanan"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginHorizontal="37dp"
+				android:layout_marginVertical="48dp"
+				android:background="@drawable/bt_main"
+				android:text="@string/buat_pesanan"
+				android:textAllCaps="false"
+				android:textColor="@color/white"
+				android:textSize="16sp" />
+
+		</LinearLayout>
+	</LinearLayout>
+</ScrollView>

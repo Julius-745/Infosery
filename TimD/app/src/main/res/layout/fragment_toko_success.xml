@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="@color/bluebg"
+    tools:context=".subscribe.TokoSuccessFragment">
+
+	<ImageView
+		android:id="@+id/imageView2"
+		android:layout_width="121dp"
+		android:layout_height="121dp"
+		android:layout_marginTop="153dp"
+		android:contentDescription="@string/sukses"
+		android:src="@drawable/crc_success"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent" />
+
+	<TextView
+		android:id="@+id/txt_tittle"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:paddingHorizontal="94.5dp"
+		android:layout_marginVertical="24dp"
+		android:gravity="center"
+		android:textStyle="bold"
+		android:text="@string/toko_berhasil_dibuat"
+		android:textColor="@color/textbold"
+		android:textSize="16sp"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+	<TextView
+		android:id="@+id/textView4"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginVertical="24dp"
+		android:gravity="center"
+		android:paddingHorizontal="68dp"
+		android:text="@string/halaman_toko_akan_selalu_muncul_dibagian_side_menu_ubah_toko_dengan_mudah_pada_side_menu_buka_dan_klik_toko_untuk_melakukan_perubahan_dan_melakukan_transaksi"
+		android:textColor="@color/textdesc"
+		android:textSize="16sp"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/txt_tittle" />
+
+	<androidx.appcompat.widget.AppCompatButton
+		android:id="@+id/bt_mulai"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginHorizontal="37dp"
+		android:layout_marginVertical="24dp"
+		android:background="@drawable/bt_main"
+		android:text="@string/mulai"
+		android:textAllCaps="false"
+		android:textColor="@color/white"
+		android:textSize="16sp"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/textView4" />
+</androidx.constraintlayout.widget.ConstraintLayout>
