@@ -1,5 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/ALFUL LAILA S/AndroidStudioProjects/Infosery/TimD/app/src/main/res/drawable/asset_stock.xml" value="0.133" />
+        <entry key="..\:/Users/ALFUL LAILA S/AndroidStudioProjects/Infosery/TimD/app/src/main/res/drawable/asset_stock2.xml" value="0.133" />
+        <entry key="..\:/Users/ALFUL LAILA S/AndroidStudioProjects/Infosery/TimD/app/src/main/res/drawable/asset_stock3.xml" value="0.133" />
+        <entry key="..\:/Users/ALFUL LAILA S/AndroidStudioProjects/Infosery/TimD/app/src/main/res/drawable/side_nav_bar.xml" value="0.1505" />
+        <entry key="..\:/Users/ALFUL LAILA S/AndroidStudioProjects/Infosery/TimD/app/src/main/res/layout/activity_dashboard_toko.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/ALFUL LAILA S/AndroidStudioProjects/Infosery/TimD/app/src/main/res/layout/activity_login.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/ALFUL LAILA S/AndroidStudioProjects/Infosery/TimD/app/src/main/res/layout/activity_main.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/ALFUL LAILA S/AndroidStudioProjects/Infosery/TimD/app/src/main/res/layout/activity_onboarding.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/ALFUL LAILA S/AndroidStudioProjects/Infosery/TimD/app/src/main/res/layout/activity_profile.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/ALFUL LAILA S/AndroidStudioProjects/Infosery/TimD/app/src/main/res/layout/activity_register.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/ALFUL LAILA S/AndroidStudioProjects/Infosery/TimD/app/src/main/res/layout/activity_splash_screen.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/ALFUL LAILA S/AndroidStudioProjects/Infosery/TimD/app/src/main/res/layout/activity_subscribe.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/ALFUL LAILA S/AndroidStudioProjects/Infosery/TimD/app/src/main/res/layout/fragment_check_email.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/ALFUL LAILA S/AndroidStudioProjects/Infosery/TimD/app/src/main/res/layout/fragment_choose_plan.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/ALFUL LAILA S/AndroidStudioProjects/Infosery/TimD/app/src/main/res/layout/fragment_confirm_payment.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/ALFUL LAILA S/AndroidStudioProjects/Infosery/TimD/app/src/main/res/layout/fragment_create_toko.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/ALFUL LAILA S/AndroidStudioProjects/Infosery/TimD/app/src/main/res/layout/fragment_detail_payment.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/ALFUL LAILA S/AndroidStudioProjects/Infosery/TimD/app/src/main/res/layout/fragment_forgot_password.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/ALFUL LAILA S/AndroidStudioProjects/Infosery/TimD/app/src/main/res/layout/fragment_history.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/ALFUL LAILA S/AndroidStudioProjects/Infosery/TimD/app/src/main/res/layout/fragment_information_payment.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/ALFUL LAILA S/AndroidStudioProjects/Infosery/TimD/app/src/main/res/layout/fragment_login.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/ALFUL LAILA S/AndroidStudioProjects/Infosery/TimD/app/src/main/res/layout/fragment_pos_bayar.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/ALFUL LAILA S/AndroidStudioProjects/Infosery/TimD/app/src/main/res/layout/fragment_pos_produk.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/ALFUL LAILA S/AndroidStudioProjects/Infosery/TimD/app/src/main/res/layout/fragment_pos_riwayat.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/ALFUL LAILA S/AndroidStudioProjects/Infosery/TimD/app/src/main/res/layout/fragment_product.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/ALFUL LAILA S/AndroidStudioProjects/Infosery/TimD/app/src/main/res/layout/fragment_productunavailable.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/ALFUL LAILA S/AndroidStudioProjects/Infosery/TimD/app/src/main/res/layout/fragment_profile.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/ALFUL LAILA S/AndroidStudioProjects/Infosery/TimD/app/src/main/res/layout/fragment_register.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/ALFUL LAILA S/AndroidStudioProjects/Infosery/TimD/app/src/main/res/layout/fragment_register_success.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/ALFUL LAILA S/AndroidStudioProjects/Infosery/TimD/app/src/main/res/layout/fragment_reset_complete.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/ALFUL LAILA S/AndroidStudioProjects/Infosery/TimD/app/src/main/res/layout/fragment_reset_password.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/ALFUL LAILA S/AndroidStudioProjects/Infosery/TimD/app/src/main/res/layout/fragment_subscribe.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/ALFUL LAILA S/AndroidStudioProjects/Infosery/TimD/app/src/main/res/layout/fragment_toko_success.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/ALFUL LAILA S/AndroidStudioProjects/Infosery/TimD/app/src/main/res/layout/item_history_payment.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/ALFUL LAILA S/AndroidStudioProjects/Infosery/TimD/app/src/main/res/layout/item_history_product.xml" value="0.3333333333333333" />
+        <entry key="..\:/Users/ALFUL LAILA S/AndroidStudioProjects/Infosery/TimD/app/src/main/res/layout/item_product.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/ALFUL LAILA S/AndroidStudioProjects/Infosery/TimD/app/src/main/res/layout/slide_onboarding.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/ALFUL LAILA S/AndroidStudioProjects/Infosery/TimD/app/src/main/res/menu/bottom_nav_menu.xml" value="0.17552083333333332" />
+      </map>
+    </option>
+  </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
