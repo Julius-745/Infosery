@@ -121,8 +121,9 @@
     <string name="pilih_tambah_produk_untuk_menambahkan_produk_kamu_kedalam_inventori">Pilih “Tambah Produk” untuk menambahkan produk kamu kedalam inventori</string>
     <string name="add_product">Tambah Produk</string>
     <string name="pilih_kelola_produk_untuk_menambahkan_produk_kamu_kedalam_inventori">Pilih “Kelola Produk” untuk menambahkan produk kamu kedalam inventori</string>
-	<string name="kelola_produk">Kelola Produk</string>
-	<string name="belum_ada_riwayar_transaksi">Belum Ada Riwayar Transaksi</string>
-	<string name="semua_transaksi_yang_akan_kamu_lakukan_akan_terlihat_di_halaman_ini">Semua transaksi yang akan kamu lakukan akan terlihat di halaman ini</string>
+    <string name="kelola_produk">Kelola Produk</string>
+    <string name="belum_ada_riwayar_transaksi">Belum Ada Riwayar Transaksi</string>
+    <string name="semua_transaksi_yang_akan_kamu_lakukan_akan_terlihat_di_halaman_ini">Semua transaksi yang akan kamu lakukan akan terlihat di halaman ini</string>
+    <string name="title_activity_drawer_cek">DrawerCek</string>
 
 </resources>
