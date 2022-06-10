@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.InposeryApp">
         <activity
+            android:name=".inventory.InventoryActivity"
+            android:exported="false" />
+        <activity
             android:name=".profile.ProfileActivity"
             android:exported="false" />
         <activity

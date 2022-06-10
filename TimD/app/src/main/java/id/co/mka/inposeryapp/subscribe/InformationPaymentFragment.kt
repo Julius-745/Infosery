@@ -30,7 +30,7 @@ class InformationPaymentFragment : Fragment() , View.OnClickListener {
 	}
 
 	override fun onClick(v: View) {
-		if (v.id == R.id.bt_lanjut) {
+		if (v.id == R.id.bt_buat_pesanan) {
 			activity?.let{
 				val intent = Intent (it, DashboardTokoActivity::class.java)
 				it.startActivity(intent)

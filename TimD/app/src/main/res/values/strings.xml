@@ -117,5 +117,8 @@
     <string name="selesai">Selesai</string>
     <string name="harus_dibayar">Harus Dibayar</string>
     <string name="sudah_bayar">Sudah Bayar</string>
+    <string name="empty_product">Belum Ada Produk</string>
+    <string name="pilih_tambah_produk_untuk_menambahkan_produk_kamu_kedalam_inventori">Pilih “Tambah Produk” untuk menambahkan produk kamu kedalam inventori</string>
+    <string name="add_product">Tambah Produk</string>
 
 </resources>
