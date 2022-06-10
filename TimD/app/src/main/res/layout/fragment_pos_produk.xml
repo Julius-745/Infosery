@@ -7,17 +7,81 @@
 	android:background="@color/bluebg"
     tools:context=".possystem.ui.produk.PosProdukFragment">
 
-    <TextView
-        android:id="@+id/text_home"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+	<SearchView
+		android:id="@+id/searchView"
+		android:layout_width="300dp"
+		android:layout_height="43dp"
+		android:layout_marginTop="24dp"
+		android:layout_marginStart="32dp"
+		android:background="@drawable/custom_searchview"
+		android:iconifiedByDefault="false"
+		android:queryHint="Cari Produk"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent" />
+
+	<Button
+		android:id="@+id/button"
+		android:layout_width="36dp"
+		android:layout_height="43dp"
+		android:layout_marginRight="32dp"
+		android:background="@drawable/custom_filter"
+		android:drawableTop="@drawable/ic_filter"
+		app:layout_constraintBottom_toBottomOf="@+id/searchView"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintTop_toTopOf="@+id/searchView" />
+
+	<ImageView
+		android:id="@+id/imageView2"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:contentDescription="@string/sukses"
+		android:layout_marginTop="122dp"
+		android:src="@drawable/img_box"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/searchView" />
+
+	<TextView
+		android:id="@+id/txt_empty"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:paddingHorizontal="94.5dp"
+		android:layout_marginVertical="36dp"
+		android:textStyle="bold"
+		android:text="@string/empty_product"
+		android:textColor="@color/black"
+		android:textSize="20sp"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+	<TextView
+		android:id="@+id/textView4"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginVertical="12dp"
+		android:gravity="center"
+		android:paddingHorizontal="37dp"
+		android:text="@string/pilih_kelola_produk_untuk_menambahkan_produk_kamu_kedalam_inventori"
+		android:textColor="@color/black"
+		android:textSize="16sp"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/txt_empty" />
+
+	<androidx.appcompat.widget.AppCompatButton
+		android:id="@+id/bt_add"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginHorizontal="37dp"
+		android:layout_marginVertical="48dp"
+		android:background="@drawable/bt_main"
+		android:text="@string/kelola_produk"
+		android:textAllCaps="false"
+		android:textColor="@color/white"
+		android:textSize="16sp"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
