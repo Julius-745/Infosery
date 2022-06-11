@@ -58,6 +58,7 @@ class DashboardTokoActivity : AppCompatActivity() {
 				R.id.navigation_produk,
 				R.id.navigation_bayar,
 				R.id.navigation_riwayat,
+				R.id.navigation_inventory,
 			)
 		)
 		binding.drawerLayout.addDrawerListener(toggle)

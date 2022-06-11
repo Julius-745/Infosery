@@ -23,11 +23,11 @@
         android:label="@string/title_riwayat"
         tools:layout="@layout/fragment_pos_riwayat" />
 
-    <fragment
-        android:id="@+id/nav_inventory"
-        android:name="id.co.mka.inposeryapp.inventory.AllProductFragment"
-        android:label="@string/title_riwayat"
-        tools:layout="@layout/fragment_all_product">
-    </fragment>
+    <activity
+        android:id="@+id/navigation_inventory"
+        android:name="id.co.mka.inposeryapp.inventory.InventoryActivity"
+        android:label="Inventory"
+        tools:layout="@layout/activity_inventory"/>
+
 
 </navigation>

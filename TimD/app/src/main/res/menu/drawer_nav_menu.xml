@@ -9,7 +9,6 @@
             android:id="@+id/nav_kasir"
             android:title="Kasir"
             android:icon="@drawable/ic_kasir" >
-
         </item>
     </group>
 
@@ -20,7 +19,7 @@
                 android:title="Dashboard"
                 android:icon="@drawable/ic_dashboard"/>
             <item
-                android:id="@+id/nav_inventory"
+                android:id="@+id/navigation_inventory"
                 android:title="Inventory"
                 android:icon="@drawable/ic_kasir"/>
             <item

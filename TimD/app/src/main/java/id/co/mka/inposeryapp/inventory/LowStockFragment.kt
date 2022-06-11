@@ -6,15 +6,33 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import id.co.mka.inposeryapp.R
+import id.co.mka.inposeryapp.databinding.FragmentAllProductBinding
+import id.co.mka.inposeryapp.databinding.FragmentLowStockBinding
 
 class LowStockFragment : Fragment() {
-
+    private lateinit var binding: FragmentLowStockBinding
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        val namaproduk = arguments?.getString(ARG_NAMAPRODUK)
+    }
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_low_stock, container, false)
+        binding = FragmentLowStockBinding.inflate(inflater, container, false)
+        val view = binding.root
+        return view
     }
 
+    companion object {
+        private val ARG_NAMAPRODUK = "namaproduk"
+        fun newInstance(namaproduk: String?):LowStockFragment{
+            val fragment = LowStockFragment()
+            val bundle = Bundle()
+            bundle.putString(ARG_NAMAPRODUK, namaproduk)
+            fragment.arguments = bundle
+            return fragment
+        }
+    }
 }

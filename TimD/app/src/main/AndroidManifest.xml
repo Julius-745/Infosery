@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.InposeryApp">
         <activity
+            android:name=".inventory.AddProductActivity"
+            android:exported="false" />
+        <activity
             android:name=".possystem.DrawerCek"
             android:exported="false"
             android:label="@string/title_activity_drawer_cek"

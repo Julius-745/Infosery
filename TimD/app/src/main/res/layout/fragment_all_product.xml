@@ -79,7 +79,7 @@
         app:layout_constraintTop_toBottomOf="@+id/txt_empty" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/bt_add"
+        android:id="@+id/bt_addproduk_allproduk"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="37dp"
