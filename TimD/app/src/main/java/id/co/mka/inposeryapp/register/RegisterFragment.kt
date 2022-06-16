@@ -11,15 +11,22 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.core.content.ContextCompat
+import androidx.lifecycle.ViewModelProvider
 import id.co.mka.inposeryapp.R
+import id.co.mka.inposeryapp.data.Retrofit
 import id.co.mka.inposeryapp.databinding.FragmentRegisterBinding
 import id.co.mka.inposeryapp.login.LoginActivity
 
 class RegisterFragment : Fragment(), View.OnClickListener {
 
 	private lateinit var binding: FragmentRegisterBinding
+	private lateinit var viewModel: RegisterViewModel
 	private var pl = 0
+	private var validateName = false
+	private var validateEmail = false
+	private var validatePw = false
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -32,6 +39,7 @@ class RegisterFragment : Fragment(), View.OnClickListener {
 
 	override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 		super.onViewCreated(view, savedInstanceState)
+		viewModel = ViewModelProvider(this)[RegisterViewModel::class.java]
 
 		binding.pwStrength1.visibility = View.GONE
 		binding.pwStrength2.visibility = View.GONE
@@ -54,9 +62,11 @@ class RegisterFragment : Fragment(), View.OnClickListener {
 				if (TextUtils.isEmpty(binding.edtName.text.toString()) && p1 > 3)
 				{
 					Log.d(TAG, "name: true")
+					validateName = false
 					binding.edtName.setCompoundDrawablesWithIntrinsicBounds(0,0, 0,0)
 				} else {
 					Log.d(TAG, "name: false")
+					validateName = true
 					binding.edtName.setCompoundDrawablesWithIntrinsicBounds(0,0,R.drawable.ic_correct,0)
 				}
 			}
@@ -75,9 +85,11 @@ class RegisterFragment : Fragment(), View.OnClickListener {
 				if (TextUtils.isEmpty(binding.edtEmail.text.toString()) && p1 > 3)
 				{
 					Log.d(TAG, "name: true")
+					validateEmail = false
 					binding.edtEmail.setCompoundDrawablesWithIntrinsicBounds(0,0, 0,0)
 				} else {
 					Log.d(TAG, "name: false")
+					validateEmail = true
 					binding.edtEmail.setCompoundDrawablesWithIntrinsicBounds(0,0,R.drawable.ic_correct,0)
 				}
 			}
@@ -105,6 +117,7 @@ class RegisterFragment : Fragment(), View.OnClickListener {
 
 				if (TextUtils.isEmpty(password))
 				{
+					validatePw = false
 					binding.pwStrength1.visibility = View.GONE
 					binding.pwStrength2.visibility = View.GONE
 					binding.pwStrength3.visibility = View.GONE
@@ -115,18 +128,21 @@ class RegisterFragment : Fragment(), View.OnClickListener {
 					binding.pwStrength3.visibility = View.VISIBLE
 					binding.txtStrength.visibility = View.VISIBLE
 					if (pl < 8 || i == 1) {
+						validatePw = false
 						binding.pwStrength1.setImageResource(R.drawable.strength_low)
 						binding.pwStrength2.setImageResource(R.drawable.strength_default)
 						binding.pwStrength3.setImageResource(R.drawable.strength_default)
 						binding.txtStrength.setText(R.string.weak_password)
 						binding.txtStrength.setTextColor(ContextCompat.getColor(context!!.applicationContext, R.color.low))
 					} else if (pl >= 8 && i == 2) {
+						validatePw = true
 						binding.pwStrength1.setImageResource(R.drawable.strength_fear)
 						binding.pwStrength2.setImageResource(R.drawable.strength_fear)
 						binding.pwStrength3.setImageResource(R.drawable.strength_default)
 						binding.txtStrength.setText(R.string.fear_password)
 						binding.txtStrength.setTextColor(ContextCompat.getColor(context!!.applicationContext, R.color.fear))
 					} else if (pl >= 8 && i == 3) {
+						validatePw = true
 						binding.pwStrength1.setImageResource(R.drawable.strength_strong)
 						binding.pwStrength2.setImageResource(R.drawable.strength_strong)
 						binding.pwStrength3.setImageResource(R.drawable.strength_strong)
@@ -147,13 +163,7 @@ class RegisterFragment : Fragment(), View.OnClickListener {
 		}
 
 		if (v.id == R.id.bt_register) {
-			val mRegisterSuccessFragment = RegisterSuccessFragment()
-			val mFragmentManager = parentFragmentManager
-			mFragmentManager.beginTransaction().apply {
-				replace(R.id.frame_container, mRegisterSuccessFragment, RegisterSuccessFragment::class.java.simpleName)
-				addToBackStack(null)
-				commit()
-			}
+			register()
 		}
 	}
 
@@ -169,5 +179,78 @@ class RegisterFragment : Fragment(), View.OnClickListener {
 			count+=1
 		}
 		return count
+	}
+
+	private fun register() {
+		if(!validateName) {
+			Toast.makeText(
+				activity,
+				"Harap Isi Nama Dengan Benar",
+				Toast.LENGTH_SHORT
+			).show()
+		} else if (!validateEmail) {
+			Toast.makeText(
+				activity,
+				"Harap Isi Email Dengan Benar",
+				Toast.LENGTH_SHORT
+			).show()
+		} else if (!validatePw) {
+			val password = binding.edtPw.text.toString()
+			if(TextUtils.isEmpty(password)) {
+				Toast.makeText(
+					activity,
+					"Password Tidak Boleh Kosong",
+					Toast.LENGTH_SHORT
+				).show()
+			} else {
+				Toast.makeText(
+					activity,
+					"Password Terlalu Lemah",
+					Toast.LENGTH_SHORT
+				).show()
+			}
+		} else {
+			showLoading(true)
+			viewModel.registerUser(
+				Retrofit.getRetrofit(),
+				binding.edtName.toString(),
+				binding.edtEmail.toString(),
+				"",
+				binding.edtPw.toString(),
+			).observe(this) {
+				showLoading(false)
+				if (it.name.isEmpty()) {
+					Toast.makeText(
+						activity,
+						"Failed to register",
+						Toast.LENGTH_SHORT
+					).show()
+				} else {
+					Toast.makeText(
+						activity,
+						"Selamat Datang : ${it.name}",
+						Toast.LENGTH_SHORT
+					).show()
+
+					val mRegisterSuccessFragment = RegisterSuccessFragment()
+					val mFragmentManager = parentFragmentManager
+					mFragmentManager.beginTransaction().apply {
+						replace(R.id.frame_container, mRegisterSuccessFragment, RegisterSuccessFragment::class.java.simpleName)
+						addToBackStack(null)
+						commit()
+					}
+				}
+			}
+		}
+	}
+
+	private fun showLoading(state: Boolean) {
+		if (state) {
+			binding.btRegister.text = "Loading ...."
+			binding.btRegister.isEnabled = false
+		} else {
+			binding.btRegister.text = "Create Account"
+			binding.btRegister.isEnabled = true
+		}
 	}
 }

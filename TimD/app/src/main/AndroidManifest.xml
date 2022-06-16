@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="id.co.mka.inposeryapp">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -12,11 +15,6 @@
         <activity
             android:name=".inventory.AddProductActivity"
             android:exported="false" />
-        <activity
-            android:name=".possystem.DrawerCek"
-            android:exported="false"
-            android:label="@string/title_activity_drawer_cek"
-            android:theme="@style/Theme.InposeryApp.NoActionBar" />
         <activity
             android:name=".inventory.InventoryActivity"
             android:exported="false" />
