@@ -219,10 +219,10 @@ class RegisterFragment : Fragment(), View.OnClickListener {
 				binding.edtPw.toString(),
 			).observe(this) {
 				showLoading(false)
-				if (it.name.isEmpty()) {
+				if (it.statusCode > 200) {
 					Toast.makeText(
 						activity,
-						"Failed to register",
+						"Failed to register , ${it.message}",
 						Toast.LENGTH_SHORT
 					).show()
 				} else {
@@ -231,7 +231,6 @@ class RegisterFragment : Fragment(), View.OnClickListener {
 						"Selamat Datang : ${it.name}",
 						Toast.LENGTH_SHORT
 					).show()
-
 					val mRegisterSuccessFragment = RegisterSuccessFragment()
 					val mFragmentManager = parentFragmentManager
 					mFragmentManager.beginTransaction().apply {

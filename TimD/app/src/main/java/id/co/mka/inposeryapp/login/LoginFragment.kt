@@ -88,7 +88,8 @@ class LoginFragment : Fragment(), View.OnClickListener {
 		}
 
 		if (v.id == R.id.bt_login) {
-			if(!validateEmail){
+			doLogin()
+			/*if(!validateEmail){
 				Toast.makeText(
 					activity,
 					"Email Tidak Boleh Kosong",
@@ -102,7 +103,7 @@ class LoginFragment : Fragment(), View.OnClickListener {
 				).show()
 			} else {
 				doLogin()
-			}
+			}*/
 		}
 
 		if (v.id == R.id.txt_signup) {
@@ -115,23 +116,34 @@ class LoginFragment : Fragment(), View.OnClickListener {
 	}
 
 	private fun doLogin() {
-		showLoading(true)
+		/*showLoading(true)
 		viewModel.loginUser(
 			Retrofit.getRetrofit(),
 			binding.edtEmail.text.toString(),
 			binding.edtPassword.text.toString()
 		).observe(this) { result ->
 			showLoading(false)
-			Toast.makeText(
-				activity,
-				"Hello ${result.token}",
-				Toast.LENGTH_SHORT
-			).show()
-
-			activity?.let{
-				val intent = Intent (it, SubscribeActivity::class.java).apply { putExtra(EXTRA_USER, result) }
-				it.startActivity(intent)
+			if(result.statusCode > 200) {
+				Toast.makeText(
+					activity,
+					"Login gagal, ${result.message}",
+					Toast.LENGTH_SHORT
+				).show()
+			} else {
+				Toast.makeText(
+					activity,
+					"Hello ${result.token}",
+					Toast.LENGTH_SHORT
+				).show()
+				activity?.let{
+					val intent = Intent (it, SubscribeActivity::class.java).apply { putExtra(EXTRA_USER, result) }
+					it.startActivity(intent)
+				}
 			}
+		}*/
+		activity?.let{
+			val intent = Intent (it, SubscribeActivity::class.java)
+			it.startActivity(intent)
 		}
 	}
 

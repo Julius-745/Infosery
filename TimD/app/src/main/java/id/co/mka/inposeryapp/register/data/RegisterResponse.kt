@@ -7,6 +7,7 @@ import kotlinx.android.parcel.Parcelize
 data class RegisterResponse (
     val message: String? = null,
     val data: Data? = null,
+    val statusCode: Int
 ): Parcelable
 
 @Parcelize

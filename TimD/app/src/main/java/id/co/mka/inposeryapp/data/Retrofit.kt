@@ -15,7 +15,7 @@ object Retrofit {
             .build()
 
         val retrofit = Retrofit.Builder()
-            .baseUrl("https://api-dev.inposery.com/")
+            .baseUrl("https://api-dev.inposery.com/api/v1/")
             .addConverterFactory(GsonConverterFactory.create())
             .client(client)
             .build()

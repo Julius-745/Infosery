@@ -5,5 +5,7 @@ import kotlinx.android.parcel.Parcelize
 
 @Parcelize
 data class UserLogin(
-    val token: String
+    val token: String,
+    val statusCode: Int,
+    val message: String? = null,
 ) : Parcelable

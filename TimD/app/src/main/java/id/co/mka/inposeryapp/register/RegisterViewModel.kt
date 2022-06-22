@@ -1,12 +1,14 @@
 package id.co.mka.inposeryapp.register
 
 import android.util.Log
+import android.widget.Toast
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import id.co.mka.inposeryapp.data.Api
 import id.co.mka.inposeryapp.register.data.RegisterResponse
 import id.co.mka.inposeryapp.register.data.UserRegister
+import org.json.JSONObject
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -45,16 +47,17 @@ class RegisterViewModel : ViewModel() {
                         //  ) {
                         if (response.isSuccessful) {
                             val responseResult = response.body()
-
                             result.value = UserRegister(
-                                responseResult?.message ?: "",
+                                responseResult?.message ?: "Sukses",
                                 responseResult?.data?.name ?: "",
+                                200
                             )
-
                         } else {
+                            val responseResult = JSONObject(response.errorBody()!!.string())
                             result.value = UserRegister(
+                                responseResult.getString("message") ?:"Internal Server Error",
                                 "",
-                                "",
+                                responseResult.getInt("statusCode")
                             )
                         }
                     }

@@ -1,15 +1,19 @@
 package id.co.mka.inposeryapp.login
 
 import android.util.Log
+import android.widget.Toast
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import id.co.mka.inposeryapp.data.Api
 import id.co.mka.inposeryapp.login.data.LoginResponse
 import id.co.mka.inposeryapp.login.data.UserLogin
+import org.json.JSONObject
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
+import java.security.AccessController.getContext
+
 
 class LoginViewModel : ViewModel() {
     fun loginUser(
@@ -33,21 +37,25 @@ class LoginViewModel : ViewModel() {
                 .enqueue(object : Callback<LoginResponse> {
                     override fun onResponse(
                         call: Call<LoginResponse>,
-                        response: Response<LoginResponse>
+                        response: Response<LoginResponse>,
                     ) {
                         //       val responseResult = response.body()
                         //  ) {
                         if (response.isSuccessful) {
                             val responseResult = response.body()
-
+                            Log.d("Response", response.body().toString())
                             result.value = UserLogin(
                                 responseResult?.data?.token ?: "",
-
+                                200,
+                                responseResult?.message ?: "Sukes",
                             )
 
                         } else {
+                            val responseResult = JSONObject(response.errorBody()!!.string())
                             result.value = UserLogin(
                                 "",
+                                responseResult.getInt("statusCode"),
+                                responseResult.getString("message") ?: "Internal Server Error"
                             )
                         }
                     }

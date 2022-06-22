@@ -7,8 +7,8 @@ import kotlinx.android.parcel.Parcelize
 @Parcelize
 data class LoginResponse(
     val message: String? = null,
-
     val data: Data? = null,
+    val statusCode: Int
 ) : Parcelable
 
 
