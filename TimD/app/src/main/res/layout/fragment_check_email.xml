@@ -6,7 +6,7 @@
 	android:layout_width="match_parent"
 	android:layout_height="match_parent"
 	android:background="@color/bluebg"
-	tools:context=".login.CheckEmailFragment">
+	tools:context=".ui.login.CheckEmailFragment">
 
 	<ImageView
 		android:id="@+id/bt_back"

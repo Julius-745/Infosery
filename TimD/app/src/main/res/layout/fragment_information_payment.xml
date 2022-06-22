@@ -6,7 +6,7 @@
 	android:layout_height="match_parent"
 	android:background="@color/bluebg"
 	android:fillViewport="true"
-	tools:context=".subscribe.InformationPaymentFragment">
+	tools:context=".ui.subscribe.InformationPaymentFragment">
 
 	<LinearLayout
 		android:layout_width="match_parent"

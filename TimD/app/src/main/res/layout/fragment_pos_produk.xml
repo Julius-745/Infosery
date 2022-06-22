@@ -7,7 +7,7 @@
 	android:layout_height="match_parent"
 	android:background="@color/bluebg"
 	android:fillViewport="true"
-	tools:context=".possystem.ui.produk.PosProdukFragment"
+	tools:context=".ui.possystem.ui.produk.PosProdukFragment"
 	>
 	<LinearLayout
 		android:layout_width="match_parent"

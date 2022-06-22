@@ -5,7 +5,7 @@
 	android:layout_width="match_parent"
 	android:layout_height="match_parent"
 	android:background="@color/bluebg"
-	tools:context=".possystem.ui.riwayat.PosRiwayatFragment">
+	tools:context=".ui.possystem.ui.riwayat.PosRiwayatFragment">
 
 
 	<SearchView

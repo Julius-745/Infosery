@@ -6,7 +6,7 @@
 	android:layout_height="match_parent"
 	android:background="@color/bluebg"
 	android:fillViewport="true"
-	tools:context=".subscribe.ChoosePlanFragment">
+	tools:context=".ui.subscribe.ChoosePlanFragment">
 
 	<LinearLayout
 		android:layout_width="match_parent"

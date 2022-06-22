@@ -7,25 +7,25 @@
 
     <fragment
         android:id="@+id/navigation_produk"
-        android:name="id.co.mka.inposeryapp.possystem.ui.produk.PosProdukFragment"
+        android:name="id.co.mka.inposeryapp.ui.possystem.ui.produk.PosProdukFragment"
         android:label="@string/title_produk"
         tools:layout="@layout/fragment_pos_produk" />
 
     <fragment
         android:id="@+id/navigation_bayar"
-        android:name="id.co.mka.inposeryapp.possystem.ui.bayar.PosBayarFragment"
+        android:name="id.co.mka.inposeryapp.ui.possystem.ui.bayar.PosBayarFragment"
         android:label="@string/title_bayar"
         tools:layout="@layout/fragment_pos_bayar" />
 
     <fragment
         android:id="@+id/navigation_riwayat"
-        android:name="id.co.mka.inposeryapp.possystem.ui.riwayat.PosRiwayatFragment"
+        android:name="id.co.mka.inposeryapp.ui.possystem.ui.riwayat.PosRiwayatFragment"
         android:label="@string/title_riwayat"
         tools:layout="@layout/fragment_pos_riwayat" />
 
     <activity
         android:id="@+id/navigation_inventory"
-        android:name="id.co.mka.inposeryapp.inventory.InventoryActivity"
+        android:name="id.co.mka.inposeryapp.ui.inventory.InventoryActivity"
         android:label="Inventory"
         tools:layout="@layout/activity_inventory"/>
 

@@ -11,34 +11,35 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
+        android:name=".BaseApplication"
         android:theme="@style/Theme.InposeryApp">
         <activity
-            android:name=".inventory.AddProductActivity"
+            android:name=".ui.inventory.AddProductActivity"
             android:exported="false" />
         <activity
-            android:name=".inventory.InventoryActivity"
+            android:name=".ui.inventory.InventoryActivity"
             android:exported="false" />
         <activity
-            android:name=".profile.ProfileActivity"
+            android:name=".ui.profile.ProfileActivity"
             android:exported="false" />
         <activity
-            android:name=".possystem.DashboardTokoActivity"
+            android:name=".ui.possystem.DashboardTokoActivity"
             android:exported="false"
             android:label="@string/title_activity_dashboard_toko" />
         <activity
-            android:name=".subscribe.SubscribeActivity"
+            android:name=".ui.subscribe.SubscribeActivity"
             android:exported="false" />
         <activity
-            android:name=".register.RegisterActivity"
+            android:name=".ui.register.RegisterActivity"
             android:exported="false" />
         <activity
-            android:name=".login.LoginActivity"
+            android:name=".ui.login.LoginActivity"
             android:exported="false" />
         <activity
-            android:name=".onboarding.OnboardingActivity"
+            android:name=".ui.onboarding.OnboardingActivity"
             android:exported="false" />
         <activity
-            android:name=".SplashScreenActivity"
+            android:name=".ui.splash.SplashScreenActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
